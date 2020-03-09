@@ -261,7 +261,7 @@ namespace _BookStop
                         throw new Exception("Data did not show in the report");
                     }
 
-                    //Display confirmation
+                    //Display confirmation message
                     MessageBox.Show("Book successfully added to the report", "Success", MessageBoxButtons.OK);
 
                     //Format

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace _BookStop
@@ -103,6 +104,7 @@ namespace _BookStop
             //Write to end of file
             using (StreamWriter report = new StreamWriter(filePath, true))
             {
+                //Write
                 report.WriteLine(data);
             }
         }
@@ -119,6 +121,7 @@ namespace _BookStop
                 //Go to the end of the file
                 while (report.EndOfStream == false)
                 {
+                    //Read
                     line = report.ReadLine();
                 }
             }
@@ -135,6 +138,7 @@ namespace _BookStop
             //Read wholefile
             using (StreamReader reader = new StreamReader(filePath))
             {
+                //Read
                 data = reader.ReadToEnd();
             }
 
