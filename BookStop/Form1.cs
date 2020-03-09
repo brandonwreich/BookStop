@@ -52,6 +52,7 @@ namespace _BookStop
 
             try
             {
+                //Init variables
                 string text = inputTextbox.Text;
 
                 //Limit only valid isbns
@@ -75,7 +76,7 @@ namespace _BookStop
                     //If connection is made
                     if (response3.IsSuccessStatusCode)
                     {
-                        //Init
+                        //Init variables
                         var jobject = JObject.Parse(raw3);
                         bookTitle = jobject.GetValue("title").ToString();
                         var offers = jobject.GetValue("offers");
@@ -84,7 +85,7 @@ namespace _BookStop
                         //Loop through buyback offers
                         foreach (var child in offers.Children().ToList())
                         {
-                            //Init
+                            //Init variables
                             var test = child.Children().FirstOrDefault();
 
                             //If offer is greater than highestOffer
@@ -146,6 +147,7 @@ namespace _BookStop
             }
             catch (Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
 
                 //Clear data
@@ -180,6 +182,7 @@ namespace _BookStop
             }
             catch(Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
 
@@ -195,9 +198,10 @@ namespace _BookStop
 
             try
             {
-                //Check if report is empty
+                //If report is empty
                 if (!methHelps.CheckForData(path))
                 {
+                    //Display error message
                     MessageBox.Show("There is no data to in the report. Please enter an isbn", "Data Error", MessageBoxButtons.OK);
                 }
                 else
@@ -208,6 +212,7 @@ namespace _BookStop
             }
             catch (Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
 
@@ -226,6 +231,7 @@ namespace _BookStop
                 //Check that there is data
                 if (isbnTextbox.Text == "" && titleTextbox.Text == "" && vendorTextbox.Text == "")
                 {
+                    //Display error message
                     MessageBox.Show("There is no data to enter. Please enter an isbn", "Data Error", MessageBoxButtons.OK);
                 }
                 else
@@ -257,6 +263,7 @@ namespace _BookStop
             }
             catch (Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
 
@@ -277,6 +284,7 @@ namespace _BookStop
             }
             catch(Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
         }
@@ -289,7 +297,7 @@ namespace _BookStop
 
             try
             {
-                //Display a confirmation message
+                //Display confirmation message
                 DialogResult result = MessageBox.Show("Are you sure you want to delete the report?", "Confirmation", MessageBoxButtons.YesNo);
 
                 //If the user presses yes
@@ -313,6 +321,7 @@ namespace _BookStop
             }
             catch (Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
 
@@ -331,6 +340,7 @@ namespace _BookStop
                 //Check that there is data
                 if (!methHelps.CheckForData(path))
                 {
+                    //Display error message
                     MessageBox.Show("There is no data to in the report. Please enter an isbn", "Data Error", MessageBoxButtons.OK);
                 }
                 else
@@ -351,6 +361,7 @@ namespace _BookStop
             }
             catch(Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
 
@@ -369,6 +380,7 @@ namespace _BookStop
                 //Check that there is data
                 if (!methHelps.CheckForData(path))
                 {
+                    //Display error message
                     MessageBox.Show("There is no data to in the report. Please enter an isbn");
                 }
                 else
@@ -398,6 +410,7 @@ namespace _BookStop
             }
             catch(Exception ex)
             {
+                //Display error message
                 methHelps.DisplayErrorMessage(ex);
             }
 
@@ -420,6 +433,7 @@ namespace _BookStop
             //Loop through input text
             foreach (char ch in ourPriceTextbox.Text)
             {
+                //If there isn't a decimal
                 if (!isDecimal)
                 {
                     //If its a number or decimal
@@ -457,7 +471,7 @@ namespace _BookStop
             //If you entered a letter
             if (enteredLetter)
             {
-                //Init
+                //Init variables
                 StringBuilder sb = new StringBuilder();
 
                 //While count is above 0
@@ -497,7 +511,7 @@ namespace _BookStop
             //If you entered a letter
             if (enteredLetter)
             {
-                //Init
+                //Init variables
                 StringBuilder sb = new StringBuilder();
 
                 //While count is above 0

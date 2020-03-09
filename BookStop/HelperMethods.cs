@@ -16,6 +16,7 @@ namespace _BookStop
             //If input contains ax 'X'
             if (text.Substring(text.Length - 1).Equals("x", StringComparison.InvariantCultureIgnoreCase))
             {
+                //Format text
                 text = text.Replace((text.Length - 1).ToString(), "1");
             }
 
@@ -68,6 +69,7 @@ namespace _BookStop
             //Calculate isbn validity
             foreach (char num in text)
             {
+                //If the number is even
                 if (count % 2 == 0)
                 {
                     total += char.GetNumericValue(num) * 3;
@@ -98,7 +100,7 @@ namespace _BookStop
         //Write data to end of file specified
         public void WriteDataToEnd(string filePath, string data)
         {
-            //Write to file
+            //Write to end of file
             using (StreamWriter report = new StreamWriter(filePath, true))
             {
                 report.WriteLine(data);
@@ -157,6 +159,7 @@ namespace _BookStop
         //Displays error message
         public void DisplayErrorMessage(Exception ex)
         {
+            //Display error message
             MessageBox.Show("The was a problem. Please try again. Error message: " + ex.Message,
                 "Error: " + ex.HResult,
                 MessageBoxButtons.OK);

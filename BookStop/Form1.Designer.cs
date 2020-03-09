@@ -94,7 +94,7 @@
             // 
             this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(879, 354);
+            this.addButton.Location = new System.Drawing.Point(879, 316);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(100, 32);
             this.addButton.TabIndex = 3;
@@ -106,7 +106,7 @@
             // 
             this.viewReportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.viewReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewReportButton.Location = new System.Drawing.Point(879, 316);
+            this.viewReportButton.Location = new System.Drawing.Point(879, 354);
             this.viewReportButton.Name = "viewReportButton";
             this.viewReportButton.Size = new System.Drawing.Size(100, 32);
             this.viewReportButton.TabIndex = 4;
