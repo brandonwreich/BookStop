@@ -26,7 +26,7 @@ namespace _BookStop
     {
         //Init variables
         readonly string path = @Directory.GetParent(Environment.CurrentDirectory).Parent.FullName.ToString() + "\\BookReport.txt";
-        HelperMethods methHelps = new HelperMethods();
+        readonly HelperMethods methHelps = new HelperMethods();
 
         public MainPage()
         {
