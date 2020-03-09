@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace _BookStop
 {
+    #region Data
+
     //Valid, Found
     //9780538493635
     //0815142331
@@ -21,6 +23,8 @@ namespace _BookStop
 
     //Invalid
     //0112112425
+
+    #endregion
 
     public partial class MainPage : Form
     {
