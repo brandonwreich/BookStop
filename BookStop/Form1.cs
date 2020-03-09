@@ -97,7 +97,9 @@ namespace _BookStop
                             {
                                 //Set highesOffer
                                 highestOffer = test.Value<decimal>("offer");
-                                vendorName = child.Path;
+
+                                //Fix vendor name
+                                vendorName = methHelps.FixVendorName(child.Path);
                             }
                         }
                     }

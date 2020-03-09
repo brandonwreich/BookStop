@@ -164,5 +164,57 @@ namespace _BookStop
                 "Error: " + ex.HResult,
                 MessageBoxButtons.OK);
         }
+
+        //Formats the vendor's name
+        public string FixVendorName(string name)
+        {
+            //Trim the name
+            name = name.Replace("offers.", "");
+            name = name.Replace("_bb", "");
+
+            //Reformat name
+            if(name == "textbooksrus")
+            {
+                name = "Textbooks-R-Us";
+            }
+            else if(name == "abebooks")
+            {
+                name = "Abe Books";
+            }
+            else if (name == "amazon")
+            {
+                name = "Amazon";
+            }
+            else if (name == "bookbyte")
+            {
+                name = "Book Byte";
+            }
+            else if (name == "booksrun")
+            {
+                name = "Books Run";
+            }
+            else if (name == "buyback101")
+            {
+                name = "BuyBack101.com";
+            }
+            else if (name == "ecampus")
+            {
+                name = "eCampus.com";
+            }
+            else if (name == "mybookcart")
+            {
+                name = "myBookCart.com";
+            }
+            else if (name == "textbookmaniac")
+            {
+                name = "Textbook Maniac";
+            }
+            else if (name == "valorebooks")
+            {
+                name = "Valor Books";
+            }
+
+            return name;
+        }
     }
 }
