@@ -243,7 +243,8 @@ namespace _BookStop
                 else
                 {
                     //Build result
-                    string result = $"Title: {titleTextbox.Text}, " +
+                    string result = $"Vendor: {vendorTextbox.Text}, " +
+                        $"Title: {titleTextbox.Text}, " +
                         $"ISBN: {isbnTextbox.Text}, " +
                         $"Company: {vendorTextbox.Text}, " +
                         $"Offer: {buybackOfferTextbox.Text}";
