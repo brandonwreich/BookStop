@@ -23,6 +23,7 @@ namespace _BookStop
 
     //Invalid
     //0112112425
+    //0122405185
 
     #endregion
 
@@ -242,12 +243,29 @@ namespace _BookStop
                 }
                 else
                 {
-                    //Build result
-                    string result = $"Vendor: {vendorTextbox.Text}, " +
-                        $"Title: {titleTextbox.Text}, " +
-                        $"ISBN: {isbnTextbox.Text}, " +
-                        $"Company: {vendorTextbox.Text}, " +
-                        $"Offer: {buybackOfferTextbox.Text}";
+                    //Init variables
+                    string result;
+
+                    //If notes textbox is empty
+                    if (notesTextbox.Text == "")
+                    {
+                        //Build result
+                        result = $"Vendor: {vendorTextbox.Text}, " +
+                            $"Title: {titleTextbox.Text}, " +
+                            $"ISBN: {isbnTextbox.Text}, " +
+                            $"Company: {vendorTextbox.Text}, " +
+                            $"Offer: {buybackOfferTextbox.Text}";
+                    }
+                    else
+                    {
+                        //Build result
+                        result = $"Vendor: {vendorTextbox.Text}, " +
+                            $"Title: {titleTextbox.Text}, " +
+                            $"ISBN: {isbnTextbox.Text}, " +
+                            $"Company: {vendorTextbox.Text}, " +
+                            $"Offer: {buybackOfferTextbox.Text}, " +
+                            $"Notes: {notesTextbox.Text}";
+                    }
 
                     //Write to file
                     methHelps.WriteDataToEnd(path, result);
