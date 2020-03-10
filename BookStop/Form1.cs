@@ -32,6 +32,7 @@ namespace _BookStop
         //Init variables
         readonly string path = @Directory.GetParent(Environment.CurrentDirectory).Parent.FullName.ToString() + "\\BookReport.txt";
         readonly HelperMethods methHelps = new HelperMethods();
+        List<string> data = new List<string>();
 
         public MainPage()
         {
@@ -213,6 +214,9 @@ namespace _BookStop
                 }
                 else
                 {
+                    //Alphabatize file data
+                    methHelps.SortDataInFile(path, data);
+
                     //Open the report
                     Process.Start(path);
                 }

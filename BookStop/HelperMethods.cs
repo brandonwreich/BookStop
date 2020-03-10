@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -219,6 +220,47 @@ namespace _BookStop
             }
 
             return name;
+        }
+
+        public void SortDataInFile(string filePath, List<string> list)
+        {
+            //Read end of file
+            using (StreamReader report = new StreamReader(filePath))
+            {
+                //Go to the end of the file
+                while (report.EndOfStream == false)
+                {
+                    //Read
+                    string line = report.ReadLine();
+
+                    list.Add(line);
+                }
+            }
+
+            //Remove blank spaces from list
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                if (list[i] == "")
+                {
+                    list.Remove(list[i]);
+                }
+            }
+
+            //Delete file
+            File.WriteAllText(filePath, "");
+
+            //Alphabatize
+            list.Sort();
+
+            //Rewrite data
+            foreach (string item in list)
+            {
+                WriteDataToEnd(filePath, item);
+                WriteDataToEnd(filePath, "");
+            }
+
+            //Delete list
+            list.Clear();
         }
     }
 }
